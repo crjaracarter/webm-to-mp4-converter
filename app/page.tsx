@@ -60,7 +60,7 @@ export default function Home() {
 
       URL.revokeObjectURL(url)
     } catch (err) {
-      setError('Error durante la conversión: ' + err.message)
+      setError('Error durante la conversión: ' + (err as Error).message)
     } finally {
       setConverting(false)
       setProgress(0)
